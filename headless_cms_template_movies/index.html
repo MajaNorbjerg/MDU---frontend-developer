@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>HEADLESS CMS PROJECT TEMPLATE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="It's a CMS without a head">
+  <meta name="author" content="Rasmus Cederdorff">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+</head>
+
+<body onhashchange="pageChange()">
+  <header>
+    <h1>HEADLESS CMS PROJECT TEMPLATE</h1>
+
+  </header>
+  <section id="moviesTab" class="page">
+    <input type="search" placeholder="Search by title or actor" onkeyup="search(this.value)">
+
+    <section id="content" class="grid-container"></section>
+  </section>
+
+  <section id="categoriesTab" class="page">
+    <div id="select-genre">
+    </div>
+    <section id="movieCategories" class="grid-container"></section>
+
+  </section>
+
+
+
+  <section id="newTab" class="page">
+    <input type="number" placeholder="Up until this year" onkeyup="yearSearch(this.value)">
+    <p id="pYear"></p>
+    <section id="newMovies" class="grid-container"></section>
+  </section>
+
+  <section id="detailView" class="page">
+
+  </section>
+
+
+
+  <nav class="tabbar">
+    <a href="#moviesTab">Movies</a>
+    <a href="#categoriesTab">Select Categories</a>
+    <a href="#newTab">New releases</a>
+
+  </nav>
+
+
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- main js file -->
+  <script src="js/main.js"></script>
+  <script src="js/spa.js"></script>
+
+</html>
